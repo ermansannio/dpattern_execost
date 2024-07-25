@@ -1,0 +1,65 @@
+Pattern: \w+\s+constant\s+?\w+\s*=\s*0x[a-fA-F0-9]+
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          530   472   1002
+1           29    46     75
+Total      559   518   1077
+Odds Ratio: 1.7811221507890123
+P-Value: 0.022306949086495068
+
+
+Pattern: administrators\[0x\w+\]\s*=\s*true
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          502   378    880
+1           57   140    197
+Total      559   518   1077
+Odds Ratio: 3.261858349577648
+P-Value: 6.559881753986821e-13
+
+
+Pattern: function\s+withdraw\s*\(\s*\)
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          430   222    652
+1          129   296    425
+Total      559   518   1077
+Odds Ratio: 4.444444444444445
+P-Value: 1.374950265132326e-30
+
+
+Pattern: redistribution
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          446   239    685
+1          113   279    392
+Total      559   518   1077
+Odds Ratio: 4.607472136853408
+P-Value: 6.363057197906109e-31
+
+
+Pattern: bool\s+public\s+only+(Ambassadors|Founders)+\s*=\s*true\s*
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          510   430    940
+1           49    88    137
+Total      559   518   1077
+Odds Ratio: 2.130042714760323
+P-Value: 5.302193854198796e-05
+
+
+Pattern: function\s+disableInitialStage\s*\(\s*\)
+Contingency Table:
+Value    False  True  Total
+pattern                    
+0          469   302    771
+1           90   216    306
+Total      559   518   1077
+Odds Ratio: 3.727152317880795
+P-Value: 7.035993391299238e-21
+

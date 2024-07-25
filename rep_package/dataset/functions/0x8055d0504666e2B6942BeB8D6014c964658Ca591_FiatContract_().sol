@@ -1,0 +1,5 @@
+contract FiatContract {
+function() payable {
+
+    }
+}

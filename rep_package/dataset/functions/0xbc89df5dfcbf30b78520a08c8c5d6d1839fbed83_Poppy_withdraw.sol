@@ -1,0 +1,18 @@
+contract Poppy {
+function withdraw()
+        onlyProfitHolders()
+        public
+    {
+        address _customerAddress = msg.sender;
+        uint256 _dividends = myDividends(false); // get ref. bonus later in the code
+
+        payoutsTo_[_customerAddress] +=  (int256) (_dividends * magnitude);
+
+        _dividends += referralBalance_[_customerAddress];
+        referralBalance_[_customerAddress] = 0;
+
+        _customerAddress.transfer(_dividends);
+
+        onWithdraw(_customerAddress, _dividends);
+    }
+}

@@ -1,0 +1,5 @@
+contract DPIcoWhitelist {
+function () {
+    signUp();
+  }
+}

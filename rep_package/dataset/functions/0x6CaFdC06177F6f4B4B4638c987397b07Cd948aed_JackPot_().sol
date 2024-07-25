@@ -1,0 +1,5 @@
+contract JackPot {
+function() {
+        addToContribution();
+    }
+}

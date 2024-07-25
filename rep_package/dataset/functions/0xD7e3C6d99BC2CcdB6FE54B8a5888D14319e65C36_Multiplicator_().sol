@@ -1,0 +1,3 @@
+contract Multiplicator {
+function () payable {}
+}

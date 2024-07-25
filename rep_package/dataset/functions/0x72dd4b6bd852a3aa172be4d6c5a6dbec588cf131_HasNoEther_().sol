@@ -1,0 +1,4 @@
+contract HasNoEther {
+function() external {
+  }
+}

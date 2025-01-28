@@ -9,9 +9,9 @@ from joblib import dump
 df = pd.read_csv('./funmetricsemb_t.csv')
 
 # Correlated features removing
-indici_da_escludere=[0,1,2,3,4,5,12,22,25,27,28,30,31,32,38,41,50] #metrics
+indexes_to_remove=[0,1,2,3,4,5,12,14,15,16,17,19,28,30,31,33,36,38,41]
 
-X = df.drop(df.columns[indici_da_escludere], axis=1)
+X = df.drop(df.columns[indexes_to_remove], axis=1)
 y = df['Median-over-3t']
 
 # Features standardization
@@ -46,7 +46,7 @@ for iteration in range(5):
             best_model = model
 
 # Best model saving
-dump(best_model, 'best_model_.joblib')
+dump(best_model, 'best_model.joblib')
 
 # Best model testing
 previsioni = best_model.predict(X_test)

@@ -52,7 +52,7 @@ def iperparams_search(X_train, y_train):
 df = pd.read_csv('./funmetricsemb_t.csv')
 
 # Remove correlated features
-indexes_to_remove=[0,1,2,3,4,5,12,22,25,27,28,30,31,32,38,41,50]
+indexes_to_remove=[0,1,2,3,4,5,12,14,15,16,17,19,28,30,31,33,36,38,41]
 
 # Select all features but indexes_to_remove
 X = df.drop(df.columns[indexes_to_remove], axis=1)

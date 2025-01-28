@@ -10,10 +10,10 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, roc_auc_score, matthews_corrcoef, accuracy_score
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
-from imblearn.combine import SMOTEENN
-from imblearn.under_sampling import TomekLinks
-from imblearn.over_sampling import SMOTE
-from imblearn.under_sampling import RandomUnderSampler
+# from imblearn.combine import SMOTEENN
+# from imblearn.under_sampling import TomekLinks
+# from imblearn.over_sampling import SMOTE
+# from imblearn.under_sampling import RandomUnderSampler
 from sklearn.model_selection import StratifiedKFold
 
 def calcola_metrica(metrica, y_test, y_pred):
@@ -25,17 +25,16 @@ def calcola_metrica(metrica, y_test, y_pred):
         return matthews_corrcoef(y_test, y_pred)
 
 # Dataset upload
-#df = pd.read_csv('./funmetrics_t.csv')
-df = pd.read_csv('./funmetricsemb_t.csv')
+df = pd.read_csv('./funmetrics_t.csv')
+#df = pd.read_csv('./funmetricsemb_t.csv')
 
 # Correlated features removing
-indexes_to_remove=[0,1,2,3,4,5,12,22,25,27,28,30,31,32,38,41,50]
-
+indexes_to_remove=[0,1,2,3,4,5,12,14,15,16,17,19,28,30,31,33,36,38,41]
 # Select all columns but indexes_to_remove
 X = df.drop(df.columns[indexes_to_remove], axis=1)
 
 # Correlated matrix computation
-#correlation_matrix = X.corr()
+#correlation_matrix = X.corr('spearman')
 
 # Show correlation matrix
 #correlation_matrix.to_csv('correlation_matrix.csv')
@@ -182,7 +181,7 @@ results_df = pd.DataFrame([(model_name, class_name, metric_name, metric_value)
                           columns=['Model', 'Class', 'Metric', 'Value'])
 
 # Save results to csv
-file_out_name='./results/results_metrics_corr_modelbal_median_t_10f.csv';
+file_out_name='./results_metrics_corr_modelbal_median_t_10f.csv';
 results_df.to_csv(file_out_name, index=False)
 
 print("Elaboration results saved in file ", file_out_name)

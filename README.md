@@ -1,14 +1,16 @@
-# Replication Package for the paper entitled "Mastering Smart Contract Costs: Inefficient Design Patterns and Expensive Functions".
+# Replication Package for the paper entitled "The Gas Burn Identity: Early Detection of \\ Gas-Intensive Functions and Patterns in Smart Contracts".
 
 Description of the content:
 
  1. *dataset* contains data required to execute scripts contained in rq1, rq2 and rq3 folders.
 
-    a. *functions* is the set of functions retrieved from smart contracts for which there is a gas price;
+    a. *function_gas_cost_pred.csv* contains the pilot related to the estimation of gas expensive functions using ChatGPT and Gemini;
+
+    b. *functions* is the set of functions retrieved from smart contracts for which there is a gas price;
     
-    b. *pattern* is the set of filtered smart contracts to answer rq3;
+    c. *pattern* is the set of filtered smart contracts to answer rq3;
     
-    c. *smart_contracts* is the basic set of all smart contracts retrieved from Etherscan.
+    d. *smart_contracts* is the basic set of all smart contracts retrieved from Etherscan.
 
  2. *rq1* contains the main scripts and data to answer rq1.
 
@@ -42,15 +44,9 @@ Description of the content:
 
 4. *rq3* contains the main scripts and data to answer rq3.
 
-    a. *diff_file_pairs.csv* contains the similar functions pairs manually selected from the similarity report;
+    a. *fisher_report.txt* contains the contingency tables computed for all patterns, with Fisher's test results;
 
-    b. *diff_report.html* is the diff report of the smart contracts containing the functions of the previous CSV file;
+    b. *fisher.py* is the script to create the fisher report;
 
-    c. *diffreport.py* is the script to create the diff report;
-
-    d. *fisher_report.txt* contains the contingency tables computed for all patterns, with Fisher's test results;
-
-    e. *fisher.py* is the script to create the fisher report;
-
-    f. *functions.txt* is the list of functions present in the diff report.
+    c. *functions.txt* is the list of functions present in the diff report.
 

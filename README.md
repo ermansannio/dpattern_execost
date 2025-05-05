@@ -4,33 +4,33 @@ Description of the content:
 
  1. *dataset* contains data required to execute scripts contained in rq1, rq2 and rq3 folders.
 
-    a. *function_gas_cost_pred.csv* contains the pilot related to the estimation of gas expensive functions using ChatGPT and Gemini;
-
-    b. *functions* is the set of functions retrieved from smart contracts for which there is a gas price;
+    a. *functions* is the set of functions retrieved from smart contracts for which there is a gas price;
     
-    c. *pattern* is the set of filtered smart contracts to answer rq3;
+    b. *pattern* is the set of filtered smart contracts to answer rq3;
     
-    d. *smart_contracts* is the basic set of all smart contracts retrieved from Etherscan.
+    c. *smart_contracts* is the basic set of all smart contracts retrieved from Etherscan.
 
  2. *rq1* contains the main scripts and data to answer rq1.
 
-    a. *best_model.joblib* is the best Random Forrest ML classifier found;
-
-    b. *funmetrics_t.csv* contains all static metrics and gas cost statistics computed for each function;
-
-    c. *funmetricsemb_t.csv* contains all of the previous file plus word embedding vectors;
-
-    d. *ml_10_fold_class.py* is the script containing all the experiments done with ML shallow classifiers and optimization tecniques;
-     
-    e. *ml_10_fold_iperp.py* is the script to find the best hyperparameters for Random Forrest;
+    a. *function_gas_cost_pred.csv* contains the pilot related to the estimation of gas expensive functions using ChatGPT and Gemini;
     
-    f. *ml_10_fold_rf_best.py* is the script to obtain the best ML classifier;
+    b. *best_model.joblib* is the best Random Forrest ML classifier found;
 
-    g. *ml_results.xlsx* is a sheet with gas statistics, metrics, word embedding vectors for all functions, and Ml performance results for all classifiers;
+    c. *funmetrics_t.csv* contains all static metrics and gas cost statistics computed for each function;
 
-    h. *randomforrest_bayesian.py* is the script to find the best hyperparameters for Random Forrest classifier with bayesian search;
+    d. *funmetricsemb_t.csv* contains all of the previous file plus word embedding vectors;
 
-    i. *similarity_matrix_red.csv* is the similarity matrix computed for all functions, in a contracted form (i.e. without duplicated and diagonal values).
+    e. *ml_10_fold_class.py* is the script containing all the experiments done with ML shallow classifiers and optimization tecniques;
+     
+    f. *ml_10_fold_iperp.py* is the script to find the best hyperparameters for Random Forrest;
+    
+    g. *ml_10_fold_rf_best.py* is the script to obtain the best ML classifier;
+
+    h. *ml_results.xlsx* is a sheet with gas statistics, metrics, word embedding vectors for all functions, and Ml performance results for all classifiers;
+
+    i. *randomforrest_bayesian.py* is the script to find the best hyperparameters for Random Forrest classifier with bayesian search;
+
+    j. *similarity_matrix_red.csv* is the similarity matrix computed for all functions, in a contracted form (i.e. without duplicated and diagonal values).
 
 3. *rq2* contains the main scripts and data to answer rq2.
 
